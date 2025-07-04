@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InspireMe – Daily Quotes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🎵 Background Music -->
+  <audio id="bg-music" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_c772c4d4bb.mp3?filename=inspiring-ambient-114563.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- 🔹 Navigation -->
+  <nav>
+    <h1>InspireMe</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#explore">Explore</a></li>
+      <li><a href="#favorites">Favorites</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🏠 Home Section -->
+  <section id="home">
+    <h2>Today's Quote</h2>
+    <p id="daily-quote">Loading...</p>
+    <p id="daily-author"></p>
+  </section>
+
+  <!-- 🔍 Explore Section -->
+  <section id="explore">
+    <h2>Explore Random Quotes</h2>
+    <div class="quote-card">
+      <p id="random-quote">Click to generate a quote</p>
+      <small id="random-author"></small>
+    </div>
+    <button onclick="generateRandomQuote()">New Quote</button>
+    <button onclick="saveFavorite()">❤️ Save to Favorites</button>
+    <button onclick="showSurprise()">🎁 Surprise Me!</button>
+  </section>
+
+  <!-- ❤️ Favorites -->
+  <section id="favorites">
+    <h2>Your Favorite Quotes</h2>
+    <div id="fav-list"></div>
+  </section>
+
+  <!-- 🎁 Surprise Popup -->
+  <div id="surprise-popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closeSurprise()">&times;</span>
+      <p id="surprise-text"></p>
+      <small id="surprise-author"></small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f9fc;
+  color: #1a1a1a;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  padding: 1rem 2rem;
+  color: white;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  margin: 0.5rem 0.5rem 0 0;
+  padding: 10px 20px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #386ed3;
+}
+
+/* 🔹 Quote Cards */
+.quote-card {
+  background: #ecefff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+  animation: fadeInCard 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quote-card p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.quote-card small {
+  display: block;
+  margin-top: 8px;
+  color: #555;
+  font-style: italic;
+}
+
+/* 🔮 Surprise Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1506784983877-45594efa4cbe') center/cover no-repeat;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  color: #333;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 80%;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.3);
+}
+
+.popup-content p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.popup-content small {
+  font-style: italic;
+  color: #666;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* 🔽 Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
